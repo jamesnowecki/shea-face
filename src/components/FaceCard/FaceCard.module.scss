@@ -1,22 +1,30 @@
 .sheaCard {
 
-    img{
+    img {
         width: 100%;
     }
 
-        .eyes {
-        width: 10%;
-    }
-
-    .leftEye {
+    .eyes {
         position: absolute;
-        left: 0px;
-        top: 0px;
-    }
+        top: 0;
+        left: 0;
+        width: 5%;
 
 
+        .leftEye {
+            position: absolute;
+            left: 21vw;
+            top: 16vw;
+            // border: 2px solid red;
+            width: 100%;
+        }
 
-    .eyesRotated {
-     
+        .rightEye {
+            position: absolute;
+            left: 28vw;
+            top: 16vw;
+            // border: 2px solid green;
+            width: 100%;
+        }
     }
 }

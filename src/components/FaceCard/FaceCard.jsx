@@ -11,7 +11,6 @@ const FaceCard = props => {
   const [eyeAngle, updateAngle] = useState(yourAngle);
 
   const rotatedEyes = {
-    width: '10%',
     transform: `rotate(${eyeAngle}deg)`,
   };
 
@@ -22,11 +21,11 @@ const FaceCard = props => {
 
     <div className={styles.sheaCard}>
       <img src={Shea} alt="Shea's face" />
-      <div>
-        <div className ={styles.eyes} className={styles.rightEye} style={rotatedEyes}>
+      <div className={styles.eyes}>
+        <div className={styles.rightEye} style={rotatedEyes}>
           <img src={Right} alt="Right eye" />
         </div>
-        <div className ={styles.eyes} className={styles.rightEye} style={rotatedEyes}>
+        <div className={styles.leftEye} style={rotatedEyes}>
           <img src={Left} alt="Left eye" />
         </div>
       </div>

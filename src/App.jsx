@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className={styles.app}>
         <div>
-          <FaceCard yourAngle={100} />
+          <FaceCard yourAngle={0} />
         </div>
     </div>
   );
