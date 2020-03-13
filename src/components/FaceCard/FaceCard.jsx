@@ -1,11 +1,37 @@
 import React from "react";
 import styles from "./FaceCard.module.scss";
+import Shea from "../../assets/shea.png";
+import Left from "../../assets/left.png";
+import Right from "../../assets/right.png";
+import { useState } from "react";
 
-const FaceCard = () => {
+const FaceCard = props => {
+  const { yourAngle } = props;
+
+  const [eyeAngle, updateAngle] = useState(yourAngle);
+
+  const rotatedEyes = {
+    width: '10%',
+    transform: `rotate(${eyeAngle}deg)`,
+  };
+
+
   return (
-    <>
-      <p>FaceCard works</p>
-    </>
+
+ 
+
+    <div className={styles.sheaCard}>
+      <img src={Shea} alt="Shea's face" />
+      <div>
+        <div className ={styles.eyes} className={styles.rightEye} style={rotatedEyes}>
+          <img src={Right} alt="Right eye" />
+        </div>
+        <div className ={styles.eyes} className={styles.rightEye} style={rotatedEyes}>
+          <img src={Left} alt="Left eye" />
+        </div>
+      </div>
+      <input type="text" name="angle" placeholder="Your angle here"></input>
+    </div>
   );
 };
 
