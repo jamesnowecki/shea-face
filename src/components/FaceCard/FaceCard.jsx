@@ -29,7 +29,6 @@ const FaceCard = props => {
           <img src={Left} alt="Left eye" />
         </div>
       </div>
-      <input type="text" name="angle" placeholder="Your angle here"></input>
     </div>
   );
 };
