@@ -12,7 +12,7 @@ const PortraitContainer = () => {
         <div className={styles.portrait}>
           <FaceCard yourAngle={0}/>
         </div>
-        <input type="text" name="angle" placeholder="Shea's angle here" onInput={() => setAngle()}></input>
+        <input type="text" name="angle" placeholder="Shea's angle here" ></input>
       </div>
     </>
   );
