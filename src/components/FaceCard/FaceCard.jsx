@@ -8,7 +8,7 @@ import { useState } from "react";
 const FaceCard = props => {
   const { yourAngle } = props;
 
-  const [eyeAngle, updateAngle] = useState(yourAngle);
+  const [eyeAngle, updateAngle] = useState(0);
 
   const rotatedEyes = {
     transform: `rotate(${eyeAngle}deg)`,
@@ -19,7 +19,7 @@ const FaceCard = props => {
 
  
 
-    <div className={styles.sheaCard}>
+    <div className={styles.sheaCard} onClick={() => updateAngle(yourAngle)}>
       <img src={Shea} alt="Shea's face" />
       <div className={styles.eyes}>
         <div className={styles.rightEye} style={rotatedEyes}>

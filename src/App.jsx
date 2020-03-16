@@ -2,20 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import styles from './App.module.scss';
 import PortraitContainer from "./containers/PortraitContainer";
+import { useState } from 'react';
 
 const App = () => {
 
-  // let apiRandomNum;
+  const [numberOfSheaFaces, updateFaceNum] = useState(0);
 
-  // const 
+  const getTheRandomNum = () => {
+  fetch('https://qrng.anu.edu.au/API/jsonI.php?length=10&type=uint8')
+        .then(result => result.json())
+        .then(result => {
+            let randomNum = result.data[0];
+            console.log(randomNum);
+            console.log(numberOfSheaFaces);
+            updateFaceNum(randomNum);
+            console.log(numberOfSheaFaces);
+        })
+        .catch(error => {
+            console.log(error)
+        });
+      }
 
-  // fetch('https://qrng.anu.edu.au/API/jsonI.php?length=1&type=uint8')
-  //   .then((randomNumber) => {return randomNumber.json()
-  //     .then(() => defineRandomNumber())
-
-  // })
-
-  const numberOfSheaFaces = 12;
+      const defineSheasFace = (number) => {
+        getTheRandomNum();
+        printTheGallery(number)
+      }
 
   let sheaFaceArray = [];
 
@@ -28,12 +39,15 @@ const App = () => {
       };
   };
 
-  printTheGallery(numberOfSheaFaces);
+  // printTheGallery(numberOfSheaFaces);
 
   return (
+    <>
+    <button onClick={() => (defineSheasFace(numberOfSheaFaces))}>Print SheaFaces!</button>
     <div className={styles.app}>
         {sheaFaceArray}
     </div>
+    </>
   );
 }
 
