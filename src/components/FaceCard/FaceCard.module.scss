@@ -1,5 +1,7 @@
 .sheaCard {
 
+    position: relative;
+
     img {
         width: 100%;
     }
@@ -13,17 +15,15 @@
 
         .leftEye {
             position: absolute;
-            left: 21vw;
-            top: 16vw;
-            // border: 2px solid red;
+            left: 200px;
+            top: 155px;
             width: 100%;
         }
 
         .rightEye {
             position: absolute;
-            left: 28vw;
-            top: 16vw;
-            // border: 2px solid green;
+            left: 260px;
+            top: 155px;
             width: 100%;
         }
     }

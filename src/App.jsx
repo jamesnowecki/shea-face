@@ -15,27 +15,24 @@ const App = () => {
 
   // })
 
-  const numberOfSheaFaces = 6;
+  const numberOfSheaFaces = 12;
 
   let sheaFaceArray = [];
 
-  const sheaFaceCard = <div><PortraitContainer /></div>
+  const sheaFaceCard = <div><PortraitContainer /></div>;
 
   const printTheGallery = (numOfSheaFaces) => {
 
       for(let i = 0; i < numOfSheaFaces; i++){
         sheaFaceArray.push(sheaFaceCard);
-      }
+      };
   };
+
+  printTheGallery(numberOfSheaFaces);
 
   return (
     <div className={styles.app}>
-        {/* <div>
-          <PortraitContainer  />
-        </div> */}
-        {sheaFaceArray.map((numberOfSheaFaces) => printTheGallery(numberOfSheaFaces))}
-        <p>You're fucked
-        </p>
+        {sheaFaceArray}
     </div>
   );
 }
