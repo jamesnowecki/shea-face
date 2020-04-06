@@ -1,18 +1,38 @@
 .app {
     margin: 0;
     padding: 0;
+    padding-top: 30px;
     box-sizing: border-box;
     min-height: 100vh;
     background-image: url(./assets/more-leaves.png);
 
+    h1 {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.582);
+      width: 30vw;
+      font-size: 60px;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.582);
+      width: 70vw;
+      margin: 20px auto;
+    }
+
     button {
       width: 200px;
       height: 50px;
-      margin-bottom: 30px;
+      margin: 20px auto;
       background-color: rgb(124, 209, 181);
+      color: white;
+      font-size: medium;
+      border: none;
     }
 
     .faces {
+      padding: 0 5vw 5vw 5vw;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -21,7 +41,7 @@
 
 
         div {
-           width: 15vw;
+           width: 20vw;
         }
     }
 }
