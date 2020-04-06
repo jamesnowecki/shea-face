@@ -14,11 +14,7 @@ const FaceCard = props => {
     transform: `rotate(${eyeAngle}deg)`,
   };
 
-
   return (
-
- 
-
     <div className={styles.sheaCard} onClick={() => updateAngle(yourAngle)}>
       <img src={Shea} alt="Shea's face" />
       <div className={styles.eyes}>

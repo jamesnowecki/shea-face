@@ -10,21 +10,19 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 5%;
-
 
         .leftEye {
             position: absolute;
-            left: 200px;
-            top: 155px;
-            width: 100%;
+            left: 154px;
+            top: 110px;
+            width: 10%;
         }
 
         .rightEye {
             position: absolute;
-            left: 260px;
-            top: 155px;
-            width: 100%;
+            left: 204px;
+            top: 115px;
+            width: 7%;
         }
     }
 }

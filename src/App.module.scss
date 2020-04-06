@@ -5,13 +5,16 @@
     box-sizing: border-box;
     min-height: 100vh;
     background-image: url(./assets/more-leaves.png);
+    // text-align: center;
 
     h1 {
       text-align: center;
       background-color: rgba(255, 255, 255, 0.582);
+      color: rgb(64, 211, 162);
       width: 30vw;
       font-size: 60px;
       margin: 0 auto;
+      border: 2px solid goldenrod;
     }
 
     p {
@@ -19,6 +22,8 @@
       background-color: rgba(255, 255, 255, 0.582);
       width: 70vw;
       margin: 20px auto;
+      padding: 5px;
+      border: 2px solid goldenrod;
     }
 
     button {
@@ -29,10 +34,12 @@
       color: white;
       font-size: medium;
       border: none;
+      display: block;
     }
 
     .faces {
-      padding: 0 5vw 5vw 5vw;
+      margin: 0 auto;
+      width: 1000px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -41,7 +48,7 @@
 
 
         div {
-           width: 20vw;
+           width: 300px;
         }
     }
 }
