@@ -9,13 +9,25 @@ const FaceCard = props => {
   const { yourAngle } = props;
 
   const [eyeAngle, updateAngle] = useState(0);
+  const [isEyeTwisted, toggleTwisted] = useState(false);
+
+  const toggleEye = () => {
+    if (isEyeTwisted) {
+      updateAngle(0);
+      toggleTwisted(!isEyeTwisted);
+    } else {
+      updateAngle(yourAngle);
+      toggleTwisted(!isEyeTwisted);
+    }
+  }
 
   const rotatedEyes = {
     transform: `rotate(${eyeAngle}deg)`,
   };
 
   return (
-    <div className={styles.sheaCard} onClick={() => updateAngle(yourAngle)}>
+    // <div className={styles.sheaCard} onClick={() => updateAngle(yourAngle)}>
+    <div className={styles.sheaCard} onClick={() => toggleEye(!isEyeTwisted)}>
       <img src={Shea} alt="Shea's face" />
       <div className={styles.eyes}>
         <div className={styles.rightEye} style={rotatedEyes}>
