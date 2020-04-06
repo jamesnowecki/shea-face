@@ -10,7 +10,6 @@ const App = () => {
   const [hallOfFaces, updateHallOfFaces] = useState([]);
   useEffect(() => {getTheRandomNum()}, []);
 
-
   const getTheRandomNum = () => {
   fetch('https://www.random.org/integers/?num=1&min=1&max=15&col=1&base=10&format=plain&rnd=new')
         .then(result => result.json())
@@ -24,12 +23,6 @@ const App = () => {
             console.log(error)
         });
       }
-
-      const defineSheasFace = (num) => {
-        console.log(num)
-        printTheGallery(num)
-      }
-
 
   const printTheGallery = (numOfSheaFaces) => {
 
@@ -45,15 +38,15 @@ const App = () => {
       updateHallOfFaces(sheaFaceArray);
   };
 
-  // printTheGallery(numberOfSheaFaces);
-
   return (
-    <>
-    <button onClick={() => (printTheGallery(numberOfSheaFaces))}>Print SheaFaces!</button>
-    <div className={styles.app}>
-        {hallOfFaces}
-    </div>
-    </>
+    <section className={styles.app}>
+      <h1>Hall of faces</h1>
+      <p>As the course progresses, all our trainer Shea has left are the frayed ends of sanity. Click the button to deploy a random number of images of Shea. The angle of the eyes is controlled by you! Input an angle into the box, and click the image to rotate his eyes!</p>
+      <button onClick={() => (printTheGallery(numberOfSheaFaces))}>Print SheaFaces!</button>
+      <div className={styles.faces}>
+      {hallOfFaces}
+      </div>
+    </section>
   );
 }
 

@@ -1,9 +1,27 @@
 .app {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-image: url(./assets/more-leaves.png);
 
-  div {
-    width: 400px;
-  }
+    button {
+      width: 200px;
+      height: 50px;
+      margin-bottom: 30px;
+      background-color: rgb(124, 209, 181);
+    }
+
+    .faces {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-image: url(./assets/more-leaves.png);
+
+
+        div {
+           width: 15vw;
+        }
+    }
 }
